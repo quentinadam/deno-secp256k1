@@ -1,0 +1,28 @@
+{
+  "name": "@quentinadam/secp256k1",
+  "version": "0.1.0",
+  "description": "A simple secp256k1 library that wraps jsr:@noble/secp256k1",
+  "license": "MIT",
+  "author": "Quentin Adam",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quentinadam/deno-secp256k1.git"
+  },
+  "exports": "./src/mod.ts",
+  "fmt": {
+    "singleQuote": true,
+    "lineWidth": 120
+  },
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true
+  },
+  "imports": {
+    "@noble/secp256k1": "jsr:@noble/secp256k1@^3.0.0",
+    "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.13",
+    "@quentinadam/ensure": "jsr:@quentinadam/ensure@^0.1.2",
+    "@quentinadam/hash": "jsr:@quentinadam/hash@^0.1.9",
+    "@quentinadam/uint8array-extension": "jsr:@quentinadam/uint8array-extension@^0.1.10",
+    "typescript": "npm:typescript@^5.9.3"
+  }
+}
