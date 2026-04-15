@@ -18,11 +18,11 @@
     "noImplicitReturns": true
   },
   "imports": {
-    "@noble/secp256k1": "jsr:@noble/secp256k1@^3.0.0",
+    "@noble/secp256k1": "jsr:@noble/secp256k1@^3.1.0",
     "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.17",
     "@quentinadam/ensure": "jsr:@quentinadam/ensure@^0.1.5",
-    "@quentinadam/hash": "jsr:@quentinadam/hash@^0.1.12",
-    "@quentinadam/uint8array-extension": "jsr:@quentinadam/uint8array-extension@^0.1.13",
-    "typescript": "npm:typescript@^5.9.3"
+    "@quentinadam/hash": "jsr:@quentinadam/hash@^0.1.14",
+    "@quentinadam/uint8array-extension": "jsr:@quentinadam/uint8array-extension@^0.1.18",
+    "typescript": "npm:typescript@^6.0.2"
   }
 }

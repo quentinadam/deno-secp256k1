@@ -2,7 +2,7 @@ import Signature from './Signature.ts';
 import { getPublicKey, randomPrivateKey, sign } from './secp256k1.ts';
 import PublicKey from './PublicKey.ts';
 import assert from '@quentinadam/assert';
-import Uint8ArrayExtension from '@quentinadam/uint8array-extension';
+import { fromUintBE, toBigUintBE } from '@quentinadam/uint8array-extension';
 import { Point } from '@noble/secp256k1';
 
 export default class PrivateKey {
@@ -19,17 +19,17 @@ export default class PrivateKey {
   }
 
   toBytes(): Uint8Array<ArrayBuffer> {
-    return Uint8ArrayExtension.fromUintBE(this.#value, 32);
+    return fromUintBE(this.#value, 32);
   }
 
   static fromBytes(bytes: Uint8Array<ArrayBuffer>): PrivateKey {
     assert(bytes.length === 32, 'Private key must be 32 bytes long');
-    const value = new Uint8ArrayExtension(bytes).toBigUintBE();
+    const value = toBigUintBE(bytes);
     return new PrivateKey(value);
   }
 
   static random(): PrivateKey {
-    return new PrivateKey(new Uint8ArrayExtension(randomPrivateKey()).toBigUintBE());
+    return new PrivateKey(toBigUintBE(randomPrivateKey()));
   }
 
   getPublicKey(): PublicKey {

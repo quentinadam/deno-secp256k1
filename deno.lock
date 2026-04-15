@@ -1,20 +1,20 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@noble/hashes@^2.0.1": "2.0.1",
-    "jsr:@noble/secp256k1@3": "3.0.0",
+    "jsr:@noble/hashes@^2.2.0": "2.2.0",
+    "jsr:@noble/secp256k1@^3.1.0": "3.1.0",
     "jsr:@quentinadam/assert@~0.1.17": "0.1.17",
     "jsr:@quentinadam/ensure@~0.1.5": "0.1.5",
-    "jsr:@quentinadam/hash@~0.1.12": "0.1.12",
-    "jsr:@quentinadam/uint8array-extension@~0.1.13": "0.1.13",
-    "npm:typescript@^5.9.3": "5.9.3"
+    "jsr:@quentinadam/hash@~0.1.14": "0.1.14",
+    "jsr:@quentinadam/uint8array-extension@~0.1.18": "0.1.18",
+    "npm:typescript@^6.0.2": "6.0.2"
   },
   "jsr": {
-    "@noble/hashes@2.0.1": {
-      "integrity": "e0e908292a0bf91099cf8ba0720a1647cef82ab38b588815b5e9535b4ff4d7bb"
+    "@noble/hashes@2.2.0": {
+      "integrity": "984d0f07d004ac13a6029ef2b200651b1572fcc952be4b313ef4e312ad696189"
     },
-    "@noble/secp256k1@3.0.0": {
-      "integrity": "8d1639a9c06fcffacf720d8319e8e996e9fbfbaf868324e4cec5dc56b2ade1b9"
+    "@noble/secp256k1@3.1.0": {
+      "integrity": "cd6b02d94b96ce37f6ef332fa20ebaeefa603edda5e3488f15be06fd1a52a359"
     },
     "@quentinadam/assert@0.1.17": {
       "integrity": "9eef3bbf11e01f89e53a3ca569a390fd9f313edfd1b962477684528bafeb9f35"
@@ -25,8 +25,8 @@
         "jsr:@quentinadam/assert"
       ]
     },
-    "@quentinadam/hash@0.1.12": {
-      "integrity": "b8cbac62bb0441f786a30137f97b9f73f961b291ea4de685a061961fdc9e2c7c",
+    "@quentinadam/hash@0.1.14": {
+      "integrity": "71ae154f75d67a0f57a81a3a10b01c35b296e955320b63668f5c87f1b198480d",
       "dependencies": [
         "jsr:@noble/hashes",
         "jsr:@quentinadam/assert",
@@ -34,27 +34,27 @@
         "jsr:@quentinadam/uint8array-extension"
       ]
     },
-    "@quentinadam/uint8array-extension@0.1.13": {
-      "integrity": "7d8aec5028b42876b83496066b547902d9fa7929e87b7e0f74dc4ff2847ab280",
+    "@quentinadam/uint8array-extension@0.1.18": {
+      "integrity": "c065e91a6e7d9ec6f11ed9f27856c8fc456953165553aead3acf68751a7d18e2",
       "dependencies": [
         "jsr:@quentinadam/assert"
       ]
     }
   },
   "npm": {
-    "typescript@5.9.3": {
-      "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
+    "typescript@6.0.2": {
+      "integrity": "sha512-bGdAIrZ0wiGDo5l8c++HWtbaNCWTS4UTv7RaTH/ThVIgjkveJt83m74bBHMJkuCbslY8ixgLBVZJIOiQlQTjfQ==",
       "bin": true
     }
   },
   "workspace": {
     "dependencies": [
-      "jsr:@noble/secp256k1@3",
+      "jsr:@noble/secp256k1@^3.1.0",
       "jsr:@quentinadam/assert@~0.1.17",
       "jsr:@quentinadam/ensure@~0.1.5",
-      "jsr:@quentinadam/hash@~0.1.12",
-      "jsr:@quentinadam/uint8array-extension@~0.1.13",
-      "npm:typescript@^5.9.3"
+      "jsr:@quentinadam/hash@~0.1.14",
+      "jsr:@quentinadam/uint8array-extension@~0.1.18",
+      "npm:typescript@^6.0.2"
     ]
   }
 }
