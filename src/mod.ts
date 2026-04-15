@@ -1,7 +1,5 @@
-import { getPublicKey, randomPrivateKey, recoverPublicKey, sign } from './secp256k1.ts';
-import CompactSignature from './CompactSignature.ts';
-import PrivateKey from './PrivateKey.ts';
-import PublicKey from './PublicKey.ts';
-import Signature from './Signature.ts';
-
-export { CompactSignature, getPublicKey, PrivateKey, PublicKey, randomPrivateKey, recoverPublicKey, sign, Signature };
+export { getPublicKey, randomPrivateKey, recoverPublicKey, sign } from './secp256k1.ts';
+export { CompactSignature } from './CompactSignature.ts';
+export { PrivateKey } from './PrivateKey.ts';
+export { PublicKey } from './PublicKey.ts';
+export { Signature } from './Signature.ts';

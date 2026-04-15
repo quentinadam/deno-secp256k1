@@ -1,8 +1,8 @@
-import * as Uint8ArrayExtension from '@quentinadam/uint8array-extension';
 import { Point } from '@noble/secp256k1';
 import assert, { AssertionError } from '@quentinadam/assert';
+import { concat, fromUintBE } from '@quentinadam/uint8array-extension';
 
-export default class PublicKey {
+export class PublicKey {
   readonly x: bigint;
   readonly y: bigint;
 
@@ -14,16 +14,9 @@ export default class PublicKey {
   toBytes(compressed = true): Uint8Array<ArrayBuffer> {
     if (compressed) {
       const prefix = (this.y & 1n) === 0n ? 0x02 : 0x03;
-      return Uint8ArrayExtension.concat([
-        new Uint8Array([prefix]),
-        Uint8ArrayExtension.fromUintBE(this.x, 32),
-      ]);
+      return concat([new Uint8Array([prefix]), fromUintBE(this.x, 32)]);
     } else {
-      return Uint8ArrayExtension.concat([
-        new Uint8Array([0x04]),
-        Uint8ArrayExtension.fromUintBE(this.x, 32),
-        Uint8ArrayExtension.fromUintBE(this.y, 32),
-      ]);
+      return concat([new Uint8Array([0x04]), fromUintBE(this.x, 32), fromUintBE(this.y, 32)]);
     }
   }
 

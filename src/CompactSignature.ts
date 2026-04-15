@@ -1,7 +1,7 @@
-import * as Uint8ArrayExtension from '@quentinadam/uint8array-extension';
 import assert from '@quentinadam/assert';
+import { concat, fromUintBE, toBigUintBE } from '@quentinadam/uint8array-extension';
 
-export default class CompactSignature {
+export class CompactSignature {
   readonly r: bigint;
   readonly s: bigint;
 
@@ -13,16 +13,13 @@ export default class CompactSignature {
   }
 
   toBytes(): Uint8Array<ArrayBuffer> {
-    return Uint8ArrayExtension.concat([
-      Uint8ArrayExtension.fromUintBE(this.r, 32),
-      Uint8ArrayExtension.fromUintBE(this.s, 32),
-    ]);
+    return concat([fromUintBE(this.r, 32), fromUintBE(this.s, 32)]);
   }
 
   static fromBytes(bytes: Uint8Array<ArrayBuffer>): CompactSignature {
     assert(bytes.length === 64, 'Compact signature must be 64 bytes long');
-    const r = Uint8ArrayExtension.toBigUintBE(bytes.slice(0, 32));
-    const s = Uint8ArrayExtension.toBigUintBE(bytes.slice(32, 64));
+    const r = toBigUintBE(bytes.slice(0, 32));
+    const s = toBigUintBE(bytes.slice(32, 64));
     return new CompactSignature({ r, s });
   }
 }

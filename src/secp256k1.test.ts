@@ -1,8 +1,8 @@
 import assert from '@quentinadam/assert';
 import { getPublicKey, recoverPublicKey, sign } from './secp256k1.ts';
-import PrivateKey from './PrivateKey.ts';
-import Signature from './Signature.ts';
-import PublicKey from './PublicKey.ts';
+import { PrivateKey } from './PrivateKey.ts';
+import { Signature } from './Signature.ts';
+import { PublicKey } from './PublicKey.ts';
 
 const privateKeyBytes = Uint8Array.fromHex('f50c596aa05b8e18c8b85f3f56171c0f95f59d1493ef31991f1095a9397206d0');
 const privateKey = PrivateKey.fromBytes(privateKeyBytes);

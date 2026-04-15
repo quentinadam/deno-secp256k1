@@ -1,11 +1,11 @@
-import Signature from './Signature.ts';
-import { getPublicKey, randomPrivateKey, sign } from './secp256k1.ts';
-import PublicKey from './PublicKey.ts';
 import assert from '@quentinadam/assert';
 import { fromUintBE, toBigUintBE } from '@quentinadam/uint8array-extension';
+import { Signature } from './Signature.ts';
+import { getPublicKey, randomPrivateKey, sign } from './secp256k1.ts';
+import { PublicKey } from './PublicKey.ts';
 import { Point } from '@noble/secp256k1';
 
-export default class PrivateKey {
+export class PrivateKey {
   readonly #value: bigint;
 
   constructor(value: bigint) {
