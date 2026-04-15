@@ -1,5 +1,5 @@
-import assert from '@quentinadam/assert';
-import ensure from '@quentinadam/ensure';
+import { assert } from '@quentinadam/assert';
+import { ensure } from '@quentinadam/ensure';
 import { concat, fromIntBE, fromUintBE, toBigUintBE } from '@quentinadam/uint8array-extension';
 import { CompactSignature } from './CompactSignature.ts';
 import { recoverPublicKey } from './secp256k1.ts';

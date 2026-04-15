@@ -1,4 +1,4 @@
-import assert from '@quentinadam/assert';
+import { assert } from '@quentinadam/assert';
 import { concat, fromUintBE, toBigUintBE } from '@quentinadam/uint8array-extension';
 
 export class CompactSignature {

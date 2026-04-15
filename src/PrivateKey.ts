@@ -1,4 +1,4 @@
-import assert from '@quentinadam/assert';
+import { assert } from '@quentinadam/assert';
 import { fromUintBE, toBigUintBE } from '@quentinadam/uint8array-extension';
 import { Signature } from './Signature.ts';
 import { getPublicKey, randomPrivateKey, sign } from './secp256k1.ts';

@@ -1,5 +1,5 @@
 import { Point } from '@noble/secp256k1';
-import assert, { AssertionError } from '@quentinadam/assert';
+import { assert, AssertionError } from '@quentinadam/assert';
 import { concat, fromUintBE } from '@quentinadam/uint8array-extension';
 
 export class PublicKey {

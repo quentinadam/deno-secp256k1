@@ -1,4 +1,4 @@
-import assert from '@quentinadam/assert';
+import { assert } from '@quentinadam/assert';
 import { getPublicKey, recoverPublicKey, sign } from './secp256k1.ts';
 import { PrivateKey } from './PrivateKey.ts';
 import { Signature } from './Signature.ts';

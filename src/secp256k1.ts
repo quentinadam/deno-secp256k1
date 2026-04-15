@@ -1,6 +1,6 @@
 import * as secp256k1 from '@noble/secp256k1';
-import assert from '@quentinadam/assert';
-import ensure from '@quentinadam/ensure';
+import { assert } from '@quentinadam/assert';
+import { ensure } from '@quentinadam/ensure';
 import { hmacSha256 } from '@quentinadam/hash/hmac-sha256';
 
 export function getPublicKey(privateKey: Uint8Array<ArrayBuffer>, compressed = true): Uint8Array<ArrayBuffer> {
