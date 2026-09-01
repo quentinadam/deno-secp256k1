@@ -2,7 +2,7 @@
   "version": "5",
   "specifiers": {
     "jsr:@noble/hashes@^2.2.0": "2.2.0",
-    "jsr:@noble/secp256k1@^3.1.0": "3.1.0",
+    "jsr:@noble/secp256k1@^3.2.0": "3.2.0",
     "jsr:@quentinadam/assert@~0.1.18": "0.1.18",
     "jsr:@quentinadam/ensure@~0.1.6": "0.1.6",
     "jsr:@quentinadam/hash@~0.1.16": "0.1.16",
@@ -13,8 +13,8 @@
     "@noble/hashes@2.2.0": {
       "integrity": "984d0f07d004ac13a6029ef2b200651b1572fcc952be4b313ef4e312ad696189"
     },
-    "@noble/secp256k1@3.1.0": {
-      "integrity": "cd6b02d94b96ce37f6ef332fa20ebaeefa603edda5e3488f15be06fd1a52a359"
+    "@noble/secp256k1@3.2.0": {
+      "integrity": "16c3482e6da33e3723557b25255e8f73105600c62a4633c78ba5771ffe877147"
     },
     "@quentinadam/assert@0.1.18": {
       "integrity": "33a484ad66cab3d5453f69730d49c05bded72b7ff1bd54b5cc3fc2327fe314ca"
@@ -48,7 +48,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@noble/secp256k1@^3.1.0",
+      "jsr:@noble/secp256k1@^3.2.0",
       "jsr:@quentinadam/assert@~0.1.18",
       "jsr:@quentinadam/ensure@~0.1.6",
       "jsr:@quentinadam/hash@~0.1.16",

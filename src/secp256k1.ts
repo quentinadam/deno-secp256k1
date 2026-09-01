@@ -20,10 +20,7 @@ export function recoverPublicKey(
   hash: Uint8Array<ArrayBuffer>,
   compressed = true,
 ): Uint8Array<ArrayBuffer> {
-  let publicKey = secp256k1.recoverPublicKey(signature, hash, { prehash: false });
-  if (compressed === false) {
-    publicKey = secp256k1.Point.fromBytes(publicKey).toBytes(false);
-  }
+  const publicKey = secp256k1.recoverPublicKey(signature, hash, { prehash: false, isCompressed: compressed });
   assert(publicKey.buffer instanceof ArrayBuffer);
   return publicKey as Uint8Array<ArrayBuffer>;
 }

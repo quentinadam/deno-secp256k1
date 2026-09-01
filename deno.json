@@ -18,7 +18,7 @@
     "noImplicitReturns": true
   },
   "imports": {
-    "@noble/secp256k1": "jsr:@noble/secp256k1@^3.1.0",
+    "@noble/secp256k1": "jsr:@noble/secp256k1@^3.2.0",
     "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.18",
     "@quentinadam/ensure": "jsr:@quentinadam/ensure@^0.1.6",
     "@quentinadam/hash": "jsr:@quentinadam/hash@^0.1.16",
