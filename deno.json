@@ -24,5 +24,11 @@
     "@quentinadam/hash": "jsr:@quentinadam/hash@^0.1.16",
     "@quentinadam/uint8array-extension": "jsr:@quentinadam/uint8array-extension@^0.1.19",
     "typescript": "npm:typescript@^6.0.2"
+  },
+  "minimumDependencyAge": {
+    "exclude": [
+      "jsr:@quentinadam/*",
+      "npm:@quentinadam/*"
+    ]
   }
 }
