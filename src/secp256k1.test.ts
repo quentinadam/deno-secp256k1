@@ -53,3 +53,12 @@ Deno.test('Signature.recoverPublicKey', () => {
   const publicKey = expectedSignature.recoverPublicKey(hash);
   assert(publicKey.toBytes(false).toHex() === expectedPublicKey.toBytes(false).toHex());
 });
+
+Deno.test('Signature.toDER', () => {
+  assert(
+    expectedSignature.toDER().toHex() ===
+      '3045022100de35da1aac43444559be59ad7b610c95399db605b5ac233b638d1133220a5cfb' +
+        '022068f870835fbd584b2ebe99cbf23f9350d89dc7c45a6a3c45cd3820c389fee00c',
+  );
+  assert(new Signature({ r: 0x80n, s: 0x7fn, recovery: 0 }).toDER().toHex() === '300702020080' + '02017f');
+});

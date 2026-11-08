@@ -6,8 +6,8 @@ import { recoverPublicKey } from './secp256k1.ts';
 import { PublicKey } from './PublicKey.ts';
 
 function encodeIntegerElement(value: bigint) {
+  assert(value >= 0n && value < 1n << 256n, 'Value must be between 0 and 2^256 - 1');
   const buffer = value === 0n ? new Uint8Array([0]) : fromIntBE(value);
-  assert(buffer.length <= 32);
   return concat([new Uint8Array([0x02]), new Uint8Array([buffer.length]), buffer]);
 }
 
